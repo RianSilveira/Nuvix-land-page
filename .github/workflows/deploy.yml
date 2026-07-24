@@ -30,17 +30,3 @@ jobs:
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 15 https://nuvixs.site || echo "000")
           echo "HTTP status: $STATUS"
           [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 500 ]
-
-      - name: Notify success
-        if: success()
-        run: |
-          curl -s -X POST -H 'Content-type: application/json' \
-            --data "{\"text\":\"✅ *Landing page publicada* — nuvixs.site\nSHA: \`${{ github.sha }}\` por \`${{ github.actor }}\`\"}" \
-            "${{ secrets.SLACK_WEBHOOK }}"
-
-      - name: Notify failure
-        if: failure()
-        run: |
-          curl -s -X POST -H 'Content-type: application/json' \
-            --data "{\"text\":\"🚨 *Deploy landing FALHOU* — nuvixs.site\nSHA: \`${{ github.sha }}\` por \`${{ github.actor }}\`\n<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Ver logs>\"}" \
-            "${{ secrets.SLACK_WEBHOOK }}"
