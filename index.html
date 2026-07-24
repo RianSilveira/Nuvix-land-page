@@ -3,11 +3,56 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nuvix | Colaboradores Digitais para Empresas</title>
-<meta name="description" content="Contrate colaboradores digitais que automatizam atendimento, vendas e processos. Trabalhe com inteligência artificial de forma simples e eficiente." />
+<title>Nuvix | Colaboradores Digitais para Empresas Inteligentes</title>
+<meta name="description" content="Contrate colaboradores digitais que atendem clientes, automatizam processos e trabalham 24h por dia pela sua empresa — sem migrar sistemas, sem contratos longos." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://nuvixoficial.com" />
+
+<!-- Open Graph (Instagram, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nuvixoficial.com" />
+<meta property="og:title" content="Nuvix | Colaboradores Digitais para Empresas Inteligentes" />
+<meta property="og:description" content="Contrate colaboradores digitais que atendem clientes, automatizam processos e trabalham 24h por dia. Integrado ao WhatsApp, sem migração de sistemas." />
+<meta property="og:image" content="https://nuvixoficial.com/og-image.jpg" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Nuvix" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nuvix | Colaboradores Digitais" />
+<meta name="twitter:description" content="Colaboradores digitais que atendem, executam e trabalham 24h por dia pela sua empresa." />
+<meta name="twitter:image" content="https://nuvixoficial.com/og-image.jpg" />
+
+<!-- JSON-LD (Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nuvix",
+  "description": "Colaboradores Digitais para empresas inteligentes — atendimento, vendas e processos automatizados com IA.",
+  "url": "https://nuvixoficial.com",
+  "logo": "https://nuvixoficial.com/og-image.jpg",
+  "sameAs": [
+    "https://www.instagram.com/nuvixoficial/",
+    "https://www.linkedin.com/in/nuvix-18b079424/"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "nuvixoficial0@gmail.com",
+    "contactType": "customer service",
+    "availableLanguage": "Portuguese"
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "Colaboradores digitais personalizados para empresas de qualquer segmento"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --bg:#09090B;
@@ -35,279 +80,373 @@
   .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
   section{position:relative;}
 
-  /* ---------- ambient background ---------- */
+  /* ── ambient background ── */
   .glow{
     position:absolute; border-radius:50%; filter:blur(120px); pointer-events:none; z-index:0;
     background:radial-gradient(circle, rgba(37,99,235,.35), transparent 70%);
   }
 
-  /* ---------- nav ---------- */
+  /* ── nav ── */
   nav{
     position:fixed; top:0; left:0; right:0; z-index:100;
-    background:rgba(9,9,11,.7); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    background:rgba(9,9,11,.75); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
     border-bottom:1px solid var(--border);
   }
-  .nav-inner{display:flex; align-items:center; justify-content:space-between; height:72px;}
-  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; letter-spacing:-.02em;}
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; height:68px; gap:20px;}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; letter-spacing:-.02em;}
   .logo-mark{width:22px; height:22px; flex-shrink:0;}
-  .nav-links{display:flex; gap:36px; font-size:14.5px; color:var(--text-dim);}
+  .nav-links{display:flex; gap:32px; font-size:14px; color:var(--text-dim);}
   .nav-links a{transition:color .2s;}
   .nav-links a:hover{color:var(--text);}
+  .nav-right{display:flex; align-items:center; gap:12px;}
+  .nav-socials{display:flex; gap:4px;}
+  .nav-social-btn{width:34px; height:34px; border-radius:8px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--text-dimmer); transition:all .2s;}
+  .nav-social-btn:hover{border-color:var(--border-strong); color:var(--text);}
   .btn{
     display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding:11px 22px; border-radius:10px; font-size:14.5px; font-weight:600;
+    padding:10px 20px; border-radius:10px; font-size:14px; font-weight:600;
     cursor:pointer; border:1px solid transparent; transition:all .2s ease; white-space:nowrap;
   }
   .btn-primary{
     background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:#fff; box-shadow:0 0 0 0 rgba(37,99,235,.5);
+    color:#fff;
   }
   .btn-primary:hover{box-shadow:0 4px 24px rgba(37,99,235,.45); transform:translateY(-1px);}
   .btn-ghost{background:rgba(255,255,255,.03); border-color:var(--border-strong); color:var(--text);}
   .btn-ghost:hover{background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.22);}
-  .nav-cta{display:none;}
-  @media(min-width:640px){.nav-cta{display:inline-flex;}}
-  @media(max-width:860px){.nav-links{display:none;}}
 
-  /* ---------- hero ---------- */
-  .hero{padding:168px 0 120px; position:relative;}
+  /* hamburger */
+  .hamburger{display:none; flex-direction:column; justify-content:center; gap:5px; width:36px; height:36px; padding:4px; cursor:pointer; border:none; background:none; border-radius:8px;}
+  .hamburger span{display:block; height:1.5px; border-radius:2px; background:var(--text-dim); transition:all .25s;}
+  .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  .mobile-menu{display:none; position:fixed; inset:68px 0 0; background:rgba(9,9,11,.97); z-index:99; padding:28px 24px; flex-direction:column; gap:6px; backdrop-filter:blur(20px);}
+  .mobile-menu.open{display:flex;}
+  .mobile-link{display:block; padding:14px 16px; border-radius:10px; font-size:17px; font-weight:500; color:var(--text-dim); transition:all .2s;}
+  .mobile-link:hover{color:var(--text); background:rgba(255,255,255,.04);}
+  .mobile-divider{height:1px; background:var(--border); margin:12px 0;}
+  .mobile-socials{display:flex; gap:12px; padding:12px 16px;}
+  .mobile-social-link{display:flex; align-items:center; gap:8px; font-size:14px; color:var(--text-dim);}
+
+  @media(min-width:861px){.hamburger{display:none;}}
+  @media(max-width:860px){.nav-links{display:none;} .hamburger{display:flex;} .nav-socials{display:none;}}
+  .nav-cta-desktop{display:none;}
+  @media(min-width:640px){.nav-cta-desktop{display:inline-flex;}}
+
+  /* ── hero ── */
+  .hero{padding:152px 0 112px; position:relative;}
   .hero-grid{display:grid; grid-template-columns:1fr; gap:64px; align-items:center; position:relative; z-index:1;}
   @media(min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;}}
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--text-dim);
-    border:1px solid var(--border); padding:7px 14px; border-radius:100px; margin-bottom:28px;
+    border:1px solid var(--border); padding:6px 14px; border-radius:100px; margin-bottom:28px;
     background:rgba(255,255,255,.02);
   }
-  .eyebrow-dot{width:6px; height:6px; border-radius:50%; background:#22c55e; box-shadow:0 0 8px #22c55e; flex-shrink:0;}
+  .eyebrow-dot{width:6px; height:6px; border-radius:50%; background:#22c55e; box-shadow:0 0 8px #22c55e; flex-shrink:0; animation:pulse 2s infinite;}
   h1{
-    font-size:clamp(38px,5.4vw,64px); font-weight:800; line-height:1.08; letter-spacing:-.03em;
-    margin-bottom:26px;
+    font-size:clamp(36px,5vw,62px); font-weight:800; line-height:1.09; letter-spacing:-.03em;
+    margin-bottom:24px;
   }
   h1 .accent{
     background:linear-gradient(135deg,#7C9CFF,var(--primary) 55%,var(--secondary));
     -webkit-background-clip:text; background-clip:text; color:transparent;
   }
-  .hero-sub{font-size:18px; color:var(--text-dim); line-height:1.65; max-width:520px; margin-bottom:38px;}
-  .hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:44px;}
-  .hero-actions .btn{padding:14px 26px; font-size:15px;}
-  .trust-row{display:flex; align-items:center; gap:18px; color:var(--text-dimmer); font-size:13px;}
+  .hero-sub{font-size:17.5px; color:var(--text-dim); line-height:1.65; max-width:500px; margin-bottom:36px;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:40px;}
+  .hero-actions .btn{padding:13px 24px; font-size:15px;}
+  .trust-row{display:flex; align-items:center; gap:16px; color:var(--text-dimmer); font-size:13px; flex-wrap:wrap;}
   .trust-row .sep{width:1px; height:14px; background:var(--border-strong);}
 
-  /* hero illustration: stacked collaborator cards */
+  /* hero cards */
   .stage{position:relative; height:440px;}
   .collab-card{
     position:absolute; width:270px; background:var(--card);
     border:1px solid var(--border); border-radius:16px; padding:18px 20px;
-    box-shadow:0 20px 50px -12px rgba(0,0,0,.6);
+    box-shadow:0 20px 60px -12px rgba(0,0,0,.7);
     animation:float 7s ease-in-out infinite;
   }
   .collab-card .top{display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;}
   .collab-card .role{display:flex; align-items:center; gap:10px;}
   .collab-icon{width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
   .collab-name{font-size:14.5px; font-weight:600;}
-  .collab-sub{font-size:12px; color:var(--text-dimmer);}
+  .collab-sub{font-size:11.5px; color:var(--text-dimmer);}
   .status{display:flex; align-items:center; gap:6px; font-size:11.5px; color:#22c55e; font-weight:500;}
-  .status .dot{width:6px; height:6px; border-radius:50%; background:#22c55e; box-shadow:0 0 6px #22c55e;}
-  .mini-bar{height:6px; border-radius:4px; background:rgba(255,255,255,.06); overflow:hidden; margin-top:8px;}
-  .mini-bar span{display:block; height:100%; border-radius:4px; background:linear-gradient(90deg,var(--primary),var(--secondary));}
+  .status .dot{width:6px; height:6px; border-radius:50%; background:#22c55e; box-shadow:0 0 6px #22c55e; animation:pulse 2s infinite;}
+  .mini-bar{height:5px; border-radius:4px; background:rgba(255,255,255,.06); overflow:hidden; margin-top:12px;}
+  .mini-bar-fill{display:block; height:100%; border-radius:4px; background:linear-gradient(90deg,var(--primary),var(--secondary));}
+  .card-stat{font-size:11px; color:var(--text-dimmer); margin-top:10px;}
+  .card-stat strong{color:var(--text-dim); font-weight:500;}
   .card-a{top:0; left:0; z-index:3; animation-delay:0s;}
-  .card-b{top:150px; left:130px; z-index:2; animation-delay:1.2s;}
-  .card-c{top:290px; left:20px; z-index:1; animation-delay:2.4s;}
+  .card-b{top:155px; left:120px; z-index:2; animation-delay:1.4s;}
+  .card-c{top:300px; left:10px; z-index:1; animation-delay:2.6s;}
   @keyframes float{0%,100%{transform:translateY(0px);} 50%{transform:translateY(-10px);}}
-  @media(max-width:960px){.stage{height:380px; transform:scale(.92); transform-origin:left top;}}
-  @media(max-width:480px){.card-b{left:70px;} .card-c{left:0;}}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:.5;}}
+  @media(max-width:960px){.stage{height:380px; transform:scale(.9); transform-origin:left top;}}
+  @media(max-width:500px){.card-b{left:64px;} .card-c{left:0;}}
 
-  /* ---------- reveal ---------- */
-  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  /* ── metrics strip ── */
+  .metrics-strip{border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:#0a0b0f; padding:0 24px;}
+  .metrics-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr);}
+  .metric-tile{padding:32px 24px; text-align:center; border-right:1px solid var(--border);}
+  .metric-tile:last-child{border-right:none;}
+  .metric-num{font-size:32px; font-weight:800; letter-spacing:-.03em; background:linear-gradient(135deg,#7C9CFF,var(--primary)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .metric-label{font-size:13px; color:var(--text-dimmer); margin-top:4px; line-height:1.4;}
+  @media(max-width:680px){.metrics-inner{grid-template-columns:repeat(2,1fr);} .metric-tile{border-right:none; border-bottom:1px solid var(--border);} .metric-tile:nth-child(odd){border-right:1px solid var(--border);} .metric-tile:last-child,.metric-tile:nth-last-child(2){border-bottom:none;}}
+  @media(max-width:360px){.metrics-inner{grid-template-columns:1fr;} .metric-tile{border-right:none;}}
+
+  /* ── scroll reveal ── */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .65s ease, transform .65s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
 
-  /* ---------- section heading ---------- */
-  .section-pad{padding:120px 0;}
-  .section-head{max-width:640px; margin-bottom:64px;}
+  /* ── section heading ── */
+  .section-pad{padding:112px 0;}
+  .section-head{max-width:640px; margin-bottom:60px;}
   .section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
-  .kicker{font-size:13px; font-weight:600; color:var(--primary); letter-spacing:.06em; text-transform:uppercase; margin-bottom:14px; display:block;}
-  h2{font-size:clamp(28px,3.6vw,42px); font-weight:800; letter-spacing:-.025em; line-height:1.15; margin-bottom:16px;}
-  .section-lead{color:var(--text-dim); font-size:16.5px; line-height:1.65;}
+  .kicker{font-size:12.5px; font-weight:600; color:var(--primary); letter-spacing:.07em; text-transform:uppercase; margin-bottom:14px; display:block;}
+  h2{font-size:clamp(26px,3.5vw,40px); font-weight:800; letter-spacing:-.025em; line-height:1.15; margin-bottom:16px;}
+  .section-lead{color:var(--text-dim); font-size:16px; line-height:1.65;}
 
-  /* ---------- collaborator grid (section 2) ---------- */
-  .collab-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+  /* ── collaborator cards ── */
+  .collab-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px;}
   .feature-card{
     background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px;
     transition:transform .3s ease, border-color .3s ease, background .3s ease;
+    position:relative; overflow:hidden;
   }
-  .feature-card:hover{transform:translateY(-6px); border-color:var(--border-strong); background:var(--card-hover);}
+  .feature-card::after{content:''; position:absolute; inset:0; background:radial-gradient(circle at 60% 0%, rgba(37,99,235,.06), transparent 60%); pointer-events:none; opacity:0; transition:opacity .3s;}
+  .feature-card:hover{transform:translateY(-5px); border-color:rgba(37,99,235,.25); background:var(--card-hover);}
+  .feature-card:hover::after{opacity:1;}
   .feature-icon{width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center; margin-bottom:20px;}
-  .feature-card h3{font-size:18px; font-weight:700; margin-bottom:14px; letter-spacing:-.01em;}
+  .feature-card h3{font-size:17.5px; font-weight:700; margin-bottom:14px; letter-spacing:-.015em;}
   .feature-card ul{list-style:none;}
-  .feature-card li{display:flex; align-items:start; gap:9px; color:var(--text-dim); font-size:14.5px; margin-bottom:9px; line-height:1.5;}
+  .feature-card li{display:flex; align-items:flex-start; gap:9px; color:var(--text-dim); font-size:14.5px; margin-bottom:10px; line-height:1.5;}
   .feature-card li svg{flex-shrink:0; margin-top:3px;}
 
-  /* ---------- problems split (section 3) ---------- */
+  /* ── problems split ── */
   .split{display:grid; grid-template-columns:1fr; gap:56px; align-items:center;}
   @media(min-width:900px){.split{grid-template-columns:1fr 1fr;}}
   .problem-list{list-style:none;}
   .problem-item{
-    display:flex; align-items:center; gap:16px; padding:17px 0; border-bottom:1px solid var(--border);
+    display:flex; align-items:center; gap:16px; padding:16px 0; border-bottom:1px solid var(--border);
     font-size:16px; color:var(--text-dim);
   }
   .problem-item:first-child{padding-top:0;}
-  .problem-item .x{width:20px; height:20px; border-radius:50%; border:1px solid rgba(255,255,255,.18); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--text-dimmer);}
-  .flow-panel{
-    background:var(--card); border:1px solid var(--border); border-radius:20px; padding:36px 28px;
-  }
+  .problem-item .x{width:20px; height:20px; border-radius:50%; border:1px solid rgba(255,255,255,.14); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--text-dimmer); font-size:13px;}
+  .flow-panel{background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px 28px;}
   .flow-row{display:flex; align-items:center; gap:14px; padding:13px 0;}
   .flow-row .label{font-size:14px; color:var(--text-dim); flex:1;}
   .flow-check{width:22px; height:22px; border-radius:50%; background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.35); display:flex; align-items:center; justify-content:center; color:#22c55e; flex-shrink:0;}
-  .flow-line{height:1px; background:var(--border); margin:0 0;}
+  .flow-line{height:1px; background:var(--border);}
 
-  /* ---------- timeline (section 4) ---------- */
-  .timeline{position:relative; max-width:640px; margin:0 auto;}
-  .timeline::before{content:''; position:absolute; left:19px; top:8px; bottom:8px; width:1px; background:linear-gradient(var(--border),var(--border));}
+  /* ── timeline ── */
+  .timeline{position:relative; max-width:620px; margin:0 auto;}
+  .timeline::before{content:''; position:absolute; left:19px; top:8px; bottom:8px; width:1px; background:linear-gradient(to bottom, rgba(37,99,235,.4), rgba(79,70,229,.2));}
   .t-item{display:flex; gap:26px; padding-bottom:44px; position:relative;}
   .t-item:last-child{padding-bottom:0;}
-  .t-num{
-    width:40px; height:40px; border-radius:50%; background:var(--card); border:1px solid var(--border-strong);
-    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; flex-shrink:0; z-index:1;
-  }
-  .t-content h4{font-size:17px; font-weight:700; margin-bottom:6px; padding-top:8px;}
+  .t-num{width:40px; height:40px; border-radius:50%; background:var(--card); border:1px solid rgba(37,99,235,.4); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; flex-shrink:0; z-index:1; color:#7C9CFF;}
+  .t-content h4{font-size:17px; font-weight:700; margin-bottom:6px; padding-top:8px; letter-spacing:-.01em;}
   .t-content p{color:var(--text-dim); font-size:14.5px; line-height:1.6;}
 
-  /* ---------- capability grid (section 5) ---------- */
-  .cap-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:14px;}
+  /* ── capabilities ── */
+  .cap-grid{display:flex; flex-wrap:wrap; gap:10px;}
   .cap-pill{
-    display:flex; align-items:center; gap:10px; background:var(--card); border:1px solid var(--border);
-    padding:14px 16px; border-radius:12px; font-size:14px; font-weight:500; transition:border-color .2s, background .2s;
+    display:flex; align-items:center; gap:9px; background:var(--card); border:1px solid var(--border);
+    padding:11px 16px; border-radius:10px; font-size:13.5px; font-weight:500; transition:all .2s;
+    color:var(--text-dim);
   }
-  .cap-pill:hover{border-color:var(--border-strong); background:var(--card-hover);}
+  .cap-pill:hover{border-color:rgba(37,99,235,.3); color:var(--text); background:var(--card-hover);}
   .cap-pill svg{color:var(--primary); flex-shrink:0;}
 
-  /* ---------- comparison table (section 6) ---------- */
+  /* ── comparison ── */
   .compare{display:grid; grid-template-columns:1fr; gap:20px; max-width:820px; margin:0 auto;}
   @media(min-width:760px){.compare{grid-template-columns:1fr 1fr;}}
   .compare-col{border-radius:20px; padding:32px 28px;}
   .compare-col.old{background:rgba(255,255,255,.02); border:1px solid var(--border);}
-  .compare-col.new{background:linear-gradient(160deg, rgba(37,99,235,.12), rgba(79,70,229,.06)); border:1px solid rgba(37,99,235,.3);}
+  .compare-col.new{background:linear-gradient(160deg, rgba(37,99,235,.1), rgba(79,70,229,.05)); border:1px solid rgba(37,99,235,.28);}
   .compare-col h4{font-size:16px; font-weight:700; margin-bottom:22px; display:flex; align-items:center; gap:8px;}
   .compare-col ul{list-style:none;}
   .compare-col li{display:flex; align-items:center; gap:11px; padding:11px 0; font-size:14.5px; border-bottom:1px solid rgba(255,255,255,.05);}
   .compare-col li:last-child{border-bottom:none;}
   .compare-col.old li{color:var(--text-dimmer);}
   .compare-col.new li{color:var(--text);}
-  .tag-new{display:inline-block; font-size:11px; font-weight:700; background:var(--primary); color:#fff; padding:3px 9px; border-radius:100px; margin-bottom:0;}
+  .tag-new{display:inline-block; font-size:11px; font-weight:700; background:var(--primary); color:#fff; padding:3px 9px; border-radius:100px;}
 
-  /* ---------- integrations (section 7) ---------- */
-  .integ-grid{display:flex; flex-wrap:wrap; gap:12px; justify-content:center;}
-  .integ-pill{
-    padding:11px 20px; border-radius:100px; border:1px solid var(--border); background:var(--card);
-    font-size:14px; color:var(--text-dim); transition:border-color .2s, color .2s;
-  }
+  /* ── integrations ── */
+  .integ-grid{display:flex; flex-wrap:wrap; gap:10px; justify-content:center;}
+  .integ-pill{padding:10px 18px; border-radius:100px; border:1px solid var(--border); background:var(--card); font-size:14px; color:var(--text-dim); transition:all .2s;}
   .integ-pill:hover{border-color:var(--border-strong); color:var(--text);}
 
-  /* ---------- security (section 8) ---------- */
-  .sec-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;}
-  .sec-card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:26px;}
+  /* ── security ── */
+  .sec-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;}
+  .sec-card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:26px; transition:border-color .2s;}
+  .sec-card:hover{border-color:var(--border-strong);}
   .sec-card svg{color:var(--primary); margin-bottom:16px;}
   .sec-card h4{font-size:15.5px; font-weight:700; margin-bottom:8px;}
-  .sec-card p{font-size:13.5px; color:var(--text-dimmer); line-height:1.5;}
+  .sec-card p{font-size:13.5px; color:var(--text-dimmer); line-height:1.55;}
 
-  /* ---------- configurator (differentiator) ---------- */
-  .configurator{
-    background:var(--card); border:1px solid var(--border-strong); border-radius:24px;
-    padding:48px; position:relative; overflow:hidden; max-width:760px; margin:0 auto;
-  }
+  /* ── configurator ── */
+  .configurator{background:var(--card); border:1px solid var(--border-strong); border-radius:24px; padding:44px; position:relative; overflow:hidden; max-width:740px; margin:0 auto;}
   .config-step{display:none;}
   .config-step.active{display:block; animation:fadein .4s ease;}
   @keyframes fadein{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);}}
   .config-progress{display:flex; gap:6px; margin-bottom:32px;}
   .config-progress span{height:3px; flex:1; border-radius:2px; background:rgba(255,255,255,.08); transition:background .3s;}
-  .config-progress span.done{background:var(--primary);}
+  .config-progress span.done{background:linear-gradient(90deg,var(--primary),var(--secondary));}
   .config-q{font-size:20px; font-weight:700; margin-bottom:22px; letter-spacing:-.01em;}
   .config-opts{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
   @media(max-width:520px){.config-opts{grid-template-columns:1fr;}}
-  .config-opt{
-    text-align:left; padding:16px 18px; border-radius:12px; border:1px solid var(--border);
-    background:rgba(255,255,255,.02); color:var(--text); font-size:14.5px; font-family:inherit; cursor:pointer;
-    transition:all .2s;
-  }
+  .config-opt{text-align:left; padding:16px 18px; border-radius:12px; border:1px solid var(--border); background:rgba(255,255,255,.02); color:var(--text); font-size:14.5px; font-family:inherit; cursor:pointer; transition:all .2s;}
   .config-opt:hover{border-color:var(--primary); background:rgba(37,99,235,.08);}
   .config-nav{display:flex; justify-content:space-between; margin-top:28px;}
-  .config-back{color:var(--text-dimmer); font-size:14px; cursor:pointer; background:none; border:none; font-family:inherit;}
+  .config-back{color:var(--text-dimmer); font-size:14px; cursor:pointer; background:none; border:none; font-family:inherit; transition:color .2s;}
+  .config-back:hover{color:var(--text);}
   .config-result{text-align:center;}
-  .result-num{font-size:56px; font-weight:800; background:linear-gradient(135deg,#7C9CFF,var(--primary)); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:6px;}
-  .result-label{color:var(--text-dim); font-size:16px; margin-bottom:32px;}
+  .result-num{font-size:60px; font-weight:800; background:linear-gradient(135deg,#7C9CFF,var(--primary)); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:6px; letter-spacing:-.04em;}
+  .result-label{color:var(--text-dim); font-size:16px; margin-bottom:32px; max-width:380px; margin-left:auto; margin-right:auto; line-height:1.5;}
 
-  /* ---------- FAQ ---------- */
-  .faq-list{max-width:760px; margin:0 auto;}
-  .faq-item{border-bottom:1px solid var(--border);}
-  .faq-q{
-    width:100%; display:flex; justify-content:space-between; align-items:center; gap:20px;
-    padding:22px 0; background:none; border:none; color:var(--text); font-family:inherit;
-    font-size:16px; font-weight:600; text-align:left; cursor:pointer;
+  /* ── contact section ── */
+  .contact-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; max-width:780px; margin:0 auto;}
+  .contact-card{
+    display:flex; flex-direction:column; align-items:flex-start; gap:12px;
+    background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px;
+    transition:all .25s; cursor:pointer; text-decoration:none;
   }
+  .contact-card:hover{border-color:rgba(37,99,235,.3); transform:translateY(-4px); background:var(--card-hover);}
+  .contact-icon{width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .contact-label{font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--text-dimmer);}
+  .contact-value{font-size:15px; font-weight:600; color:var(--text);}
+  .contact-cta{font-size:13px; color:var(--primary); display:flex; align-items:center; gap:6px; margin-top:auto;}
+
+  /* ── FAQ ── */
+  .faq-list{max-width:740px; margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--border);}
+  .faq-q{width:100%; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 0; background:none; border:none; color:var(--text); font-family:inherit; font-size:15.5px; font-weight:600; text-align:left; cursor:pointer;}
   .faq-q svg{flex-shrink:0; transition:transform .3s; color:var(--text-dimmer);}
   .faq-item.open .faq-q svg{transform:rotate(45deg); color:var(--primary);}
   .faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
-  .faq-a p{padding-bottom:22px; color:var(--text-dim); font-size:14.5px; line-height:1.65; max-width:640px;}
+  .faq-a p{padding-bottom:22px; color:var(--text-dim); font-size:14.5px; line-height:1.65; max-width:620px;}
 
-  /* ---------- final CTA ---------- */
+  /* ── final CTA ── */
   .final-cta{
-    background:radial-gradient(ellipse at 50% 0%, rgba(37,99,235,.18), transparent 60%), #0c0d11;
+    background:radial-gradient(ellipse at 50% 0%, rgba(37,99,235,.16), transparent 60%), #0a0b0f;
     border-top:1px solid var(--border); border-bottom:1px solid var(--border);
-    text-align:center; padding:130px 24px;
+    text-align:center; padding:120px 24px;
   }
-  .final-cta h2{max-width:620px; margin:0 auto 34px;}
+  .final-cta h2{max-width:580px; margin:0 auto 32px;}
+  .cta-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+  .cta-actions .btn{padding:14px 26px; font-size:15px;}
+  .cta-note{margin-top:16px; font-size:13px; color:var(--text-dimmer);}
 
-  footer{padding:64px 0 40px;}
-  .footer-top{display:flex; flex-wrap:wrap; justify-content:space-between; gap:40px; padding-bottom:44px; border-bottom:1px solid var(--border); margin-bottom:28px;}
-  .footer-brand p{color:var(--text-dimmer); font-size:13.5px; max-width:280px; margin-top:14px; line-height:1.6;}
-  .footer-cols{display:flex; gap:64px; flex-wrap:wrap;}
-  .footer-col h5{font-size:13px; color:var(--text-dimmer); margin-bottom:16px; font-weight:600;}
+  /* ── footer ── */
+  footer{padding:56px 0 36px;}
+  .footer-top{display:flex; flex-wrap:wrap; justify-content:space-between; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--border); margin-bottom:28px;}
+  .footer-brand p{color:var(--text-dimmer); font-size:13.5px; max-width:260px; margin-top:14px; line-height:1.6;}
+  .footer-socials{display:flex; gap:8px; margin-top:20px;}
+  .footer-social{width:34px; height:34px; border-radius:8px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--text-dimmer); transition:all .2s;}
+  .footer-social:hover{border-color:var(--border-strong); color:var(--text);}
+  .footer-cols{display:flex; gap:56px; flex-wrap:wrap;}
+  .footer-col h5{font-size:12px; color:var(--text-dimmer); margin-bottom:16px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;}
   .footer-col a{display:block; font-size:14px; color:var(--text-dim); margin-bottom:11px; transition:color .2s;}
   .footer-col a:hover{color:var(--text);}
   .footer-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; color:var(--text-dimmer); font-size:13px;}
+
+  /* ── floating button ── */
+  .float-btn{
+    position:fixed; bottom:28px; right:24px; z-index:90;
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg,#E1306C,#833AB4);
+    color:#fff; border-radius:100px; padding:12px 18px 12px 14px;
+    font-size:14px; font-weight:600; font-family:inherit;
+    box-shadow:0 4px 24px rgba(225,48,108,.4);
+    transition:all .2s; cursor:pointer; border:none;
+    text-decoration:none;
+  }
+  .float-btn:hover{transform:translateY(-2px) scale(1.03); box-shadow:0 8px 32px rgba(225,48,108,.5);}
+  .float-btn .float-icon{width:22px; height:22px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  @media(max-width:480px){.float-btn span.float-label{display:none;} .float-btn{padding:14px;} .float-btn .float-icon{width:24px; height:24px;}}
 </style>
 </head>
 <body>
 
+<!-- FLOATING INSTAGRAM BUTTON -->
+<a href="https://ig.me/m/nuvixoficial" target="_blank" rel="noopener" class="float-btn" aria-label="Falar pelo Instagram">
+  <span class="float-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+  </span>
+  <span class="float-label">Falar pelo Instagram</span>
+</a>
+
+<!-- NAV -->
 <nav>
   <div class="wrap nav-inner">
-    <div class="logo">
+    <a href="#" class="logo">
       <svg class="logo-mark" viewBox="0 0 24 24" fill="none">
         <path d="M4 16C4 9.4 9.4 4 16 4" stroke="url(#g1)" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="M8 20C8 12.3 12.3 8 20 8" stroke="url(#g2)" stroke-width="2.6" stroke-linecap="round" opacity="0.5"/>
+        <path d="M8 20C8 12.3 12.3 8 20 8" stroke="url(#g2)" stroke-width="2.6" stroke-linecap="round" opacity="0.55"/>
         <defs>
           <linearGradient id="g1" x1="4" y1="16" x2="16" y2="4"><stop stop-color="#7C9CFF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient>
           <linearGradient id="g2" x1="8" y1="20" x2="20" y2="8"><stop stop-color="#2563EB"/><stop offset="1" stop-color="#4F46E5"/></linearGradient>
         </defs>
       </svg>
       NUVIX
-    </div>
+    </a>
     <div class="nav-links">
       <a href="#solucoes">Soluções</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#integracoes">Integrações</a>
-      <a href="#faq">FAQ</a>
+      <a href="#contato">Contato</a>
     </div>
-    <a href="#configurador" class="btn btn-primary nav-cta">Agendar demonstração</a>
+    <div class="nav-right">
+      <div class="nav-socials">
+        <a href="https://www.instagram.com/nuvixoficial/" target="_blank" rel="noopener" class="nav-social-btn" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/nuvix-18b079424/" target="_blank" rel="noopener" class="nav-social-btn" aria-label="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+      <a href="#contato" class="btn btn-primary nav-cta-desktop">Fale com a Nuvix</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#solucoes" class="mobile-link" onclick="closeMobile()">Soluções</a>
+  <a href="#como-funciona" class="mobile-link" onclick="closeMobile()">Como funciona</a>
+  <a href="#integracoes" class="mobile-link" onclick="closeMobile()">Integrações</a>
+  <a href="#contato" class="mobile-link" onclick="closeMobile()">Contato</a>
+  <div class="mobile-divider"></div>
+  <a href="https://www.instagram.com/nuvixoficial/" target="_blank" rel="noopener" class="mobile-link" style="color:#E1306C;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:8px;"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+    @nuvixoficial
+  </a>
+  <a href="mailto:nuvixoficial0@gmail.com" class="mobile-link">nuvixoficial0@gmail.com</a>
+</div>
+
 <!-- HERO -->
 <section class="hero">
-  <div class="glow" style="width:600px; height:600px; top:-200px; right:-100px;"></div>
+  <div class="glow" style="width:640px; height:640px; top:-200px; right:-100px; opacity:.7;"></div>
+  <div class="glow" style="width:400px; height:400px; bottom:-100px; left:-80px; opacity:.3; background:radial-gradient(circle, rgba(79,70,229,.25), transparent 70%);"></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow"><span class="eyebrow-dot"></span>Já trabalhando em empresas reais, 24 horas por dia</span>
-      <h1>Contrate <span class="accent">colaboradores digitais</span> para sua empresa.</h1>
-      <p class="hero-sub">Funcionários de IA que atendem clientes, automatizam processos e ajudam sua empresa a crescer 24 horas por dia.</p>
+      <span class="eyebrow"><span class="eyebrow-dot"></span>Colaboradores digitais, ativos agora</span>
+      <h1>Sua empresa atendendo<br><span class="accent">24 horas por dia.</span></h1>
+      <p class="hero-sub">Colaboradores digitais que respondem clientes, executam tarefas e trabalham junto da sua equipe — sem pausas, sem limites de escala.</p>
       <div class="hero-actions">
-        <a href="#configurador" class="btn btn-primary">Agendar demonstração</a>
-        <a href="#solucoes" class="btn btn-ghost">Conheça as soluções</a>
+        <a href="#contato" class="btn btn-primary">Fale com a Nuvix</a>
+        <a href="#solucoes" class="btn btn-ghost">Ver soluções</a>
       </div>
       <div class="trust-row">
-        <span>Onboarding em dias, não meses</span>
+        <span>Onboarding em dias</span>
         <span class="sep"></span>
-        <span>Integração com seus sistemas</span>
+        <span>Zero migração</span>
+        <span class="sep"></span>
+        <span>Integrado ao WhatsApp</span>
       </div>
     </div>
     <div class="stage">
@@ -321,7 +460,8 @@
           </div>
           <div class="status"><span class="dot"></span>online</div>
         </div>
-        <div class="mini-bar"><span style="width:78%;"></span></div>
+        <div class="mini-bar"><span class="mini-bar-fill" style="width:78%;"></span></div>
+        <div class="card-stat"><strong>147</strong> conversas hoje</div>
       </div>
       <div class="collab-card card-b">
         <div class="top">
@@ -333,7 +473,8 @@
           </div>
           <div class="status"><span class="dot"></span>online</div>
         </div>
-        <div class="mini-bar"><span style="width:54%;"></span></div>
+        <div class="mini-bar"><span class="mini-bar-fill" style="width:54%;"></span></div>
+        <div class="card-stat"><strong>38</strong> leads qualificados</div>
       </div>
       <div class="collab-card card-c">
         <div class="top">
@@ -345,19 +486,30 @@
           </div>
           <div class="status"><span class="dot"></span>online</div>
         </div>
-        <div class="mini-bar"><span style="width:91%;"></span></div>
+        <div class="mini-bar"><span class="mini-bar-fill" style="width:91%;"></span></div>
+        <div class="card-stat"><strong>23h</strong> economizadas hoje</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- METRICS STRIP -->
+<div class="metrics-strip">
+  <div class="metrics-inner">
+    <div class="metric-tile"><div class="metric-num">24/7</div><div class="metric-label">Atendimento contínuo</div></div>
+    <div class="metric-tile"><div class="metric-num">Dias</div><div class="metric-label">Para começar a operar</div></div>
+    <div class="metric-tile"><div class="metric-num">Zero</div><div class="metric-label">Migração de sistema</div></div>
+    <div class="metric-tile"><div class="metric-num">100%</div><div class="metric-label">Integrado ao WhatsApp</div></div>
+  </div>
+</div>
 
 <!-- SECTION 2: COLLABORATORS -->
 <section id="solucoes" class="section-pad">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="kicker">Sua equipe, ampliada</span>
-      <h2>Sua equipe acaba de ganhar novos colaboradores.</h2>
-      <p class="section-lead">Cada colaborador digital é treinado para uma função específica dentro da sua empresa — e nunca tira folga.</p>
+      <h2>Sua empresa acaba de ganhar novos colaboradores.</h2>
+      <p class="section-lead">Cada colaborador digital é treinado para uma função específica — e nunca tira folga.</p>
     </div>
     <div class="collab-grid">
       <div class="feature-card reveal">
@@ -366,9 +518,9 @@
         </div>
         <h3>Atendimento Digital</h3>
         <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Responde WhatsApp.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Responde no WhatsApp.</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Agenda clientes.</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Tira dúvidas.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Tira dúvidas em tempo real.</li>
         </ul>
       </div>
       <div class="feature-card reveal">
@@ -378,7 +530,7 @@
         <h3>Comercial Digital</h3>
         <ul>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Qualifica leads.</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Faz follow-up.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Faz follow-up automático.</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Marca reuniões.</li>
         </ul>
       </div>
@@ -400,8 +552,8 @@
         <h3>Processos Digitais</h3>
         <ul>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Integra sistemas.</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Automatiza tarefas.</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Economiza horas.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Automatiza tarefas repetitivas.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Economiza horas por dia.</li>
         </ul>
       </div>
     </div>
@@ -409,22 +561,23 @@
 </section>
 
 <!-- SECTION 3: PROBLEMS -->
-<section class="section-pad" style="background:#0c0d11; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+<section class="section-pad" style="background:#0a0b0f; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="kicker">O custo do trabalho manual</span>
-      <h2>Empresas perdem milhares de horas com tarefas repetitivas.</h2>
+      <h2>Empresas perdem horas valiosas com tarefas que poderiam ser automatizadas.</h2>
     </div>
     <div class="split">
       <ul class="problem-list reveal">
-        <li class="problem-item"><span class="x">×</span>Responder WhatsApp.</li>
+        <li class="problem-item"><span class="x">×</span>Responder WhatsApp manualmente.</li>
         <li class="problem-item"><span class="x">×</span>Atualizar planilhas.</li>
         <li class="problem-item"><span class="x">×</span>Enviar propostas.</li>
         <li class="problem-item"><span class="x">×</span>Marcar reuniões.</li>
-        <li class="problem-item"><span class="x">×</span>Responder clientes.</li>
-        <li class="problem-item"><span class="x">×</span>Cadastrar informações.</li>
+        <li class="problem-item"><span class="x">×</span>Acompanhar clientes sem resposta.</li>
+        <li class="problem-item"><span class="x">×</span>Cadastrar informações em sistemas.</li>
       </ul>
       <div class="flow-panel reveal">
+        <div style="font-size:13px; color:var(--text-dimmer); font-weight:600; text-transform:uppercase; letter-spacing:.06em; margin-bottom:20px;">Com a Nuvix</div>
         <div class="flow-row"><span class="label">Responder WhatsApp</span><span class="flow-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span></div>
         <div class="flow-line"></div>
         <div class="flow-row"><span class="label">Atualizar planilhas</span><span class="flow-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span></div>
@@ -442,40 +595,40 @@
 <!-- SECTION 4: HOW IT WORKS -->
 <section id="como-funciona" class="section-pad">
   <div class="wrap">
-    <div class="section-head center reveal" style="max-width:560px;">
+    <div class="section-head center reveal" style="max-width:540px;">
       <span class="kicker">Do primeiro contato ao primeiro resultado</span>
       <h2>Como funciona</h2>
     </div>
     <div class="timeline reveal">
       <div class="t-item"><div class="t-num">1</div><div class="t-content"><h4>Entendemos sua empresa.</h4><p>Mapeamos processos, canais de atendimento e onde o tempo da sua equipe está sendo mais consumido.</p></div></div>
       <div class="t-item"><div class="t-num">2</div><div class="t-content"><h4>Criamos seu colaborador digital.</h4><p>Configuramos um colaborador sob medida para a função certa dentro da sua operação.</p></div></div>
-      <div class="t-item"><div class="t-num">3</div><div class="t-content"><h4>Integramos aos sistemas existentes.</h4><p>Conectamos com as ferramentas que sua empresa já usa, sem trocar nada do que já funciona.</p></div></div>
+      <div class="t-item"><div class="t-num">3</div><div class="t-content"><h4>Integramos aos sistemas existentes.</h4><p>Conectamos com as ferramentas que sua empresa já usa — sem trocar nada do que já funciona.</p></div></div>
       <div class="t-item"><div class="t-num">4</div><div class="t-content"><h4>Seu colaborador começa a trabalhar.</h4><p>Atendimento, vendas e processos passam a rodar continuamente, 24 horas por dia.</p></div></div>
-      <div class="t-item"><div class="t-num">5</div><div class="t-content"><h4>Você acompanha tudo em tempo real.</h4><p>Um painel simples mostra o que está sendo feito e o tempo que está sendo economizado.</p></div></div>
+      <div class="t-item"><div class="t-num">5</div><div class="t-content"><h4>Você acompanha tudo em tempo real.</h4><p>Um painel simples mostra o que está sendo feito e o tempo que está sendo economizado pela sua equipe.</p></div></div>
     </div>
   </div>
 </section>
 
 <!-- SECTION 5: CAPABILITIES -->
-<section class="section-pad" style="background:#0c0d11; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+<section class="section-pad" style="background:#0a0b0f; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="kicker">Cobertura completa</span>
       <h2>O que nossos colaboradores fazem</h2>
     </div>
     <div class="cap-grid reveal">
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Atendimento</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Vendas</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Suporte</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Financeiro</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Agendamento</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>CRM</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>ERP</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>WhatsApp</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Instagram</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Email</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Integrações</div>
-      <div class="cap-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Dashboards</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Atendimento</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Vendas</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Suporte</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Financeiro</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Agendamento</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>CRM</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>ERP</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>WhatsApp</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Instagram</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>E-mail</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Integrações</div>
+      <div class="cap-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dashboards</div>
     </div>
   </div>
 </section>
@@ -491,22 +644,22 @@
       <div class="compare-col old">
         <h4>Chatbot tradicional</h4>
         <ul>
-          <li>Responde perguntas.</li>
-          <li>Segue scripts fixos.</li>
-          <li>Capacidade limitada.</li>
-          <li>Não executa tarefas.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-dimmer)" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>Responde perguntas simples.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-dimmer)" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>Segue scripts fixos.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-dimmer)" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>Capacidade limitada.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-dimmer)" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>Não executa tarefas reais.</li>
         </ul>
       </div>
       <div class="compare-col new">
-        <span class="tag-new" style="margin-bottom:16px;">NUVIX</span>
-        <h4 style="margin-top:14px;">Colaborador digital</h4>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;"><span class="tag-new">NUVIX</span></div>
+        <h4>Colaborador digital</h4>
         <ul>
-          <li>Entende o contexto da conversa.</li>
-          <li>Executa tarefas de ponta a ponta.</li>
-          <li>Consulta seus sistemas em tempo real.</li>
-          <li>Toma decisões dentro de regras definidas.</li>
-          <li>Aprende os processos da sua empresa.</li>
-          <li>Trabalha continuamente, sem pausas.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Entende o contexto da conversa.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Executa tarefas de ponta a ponta.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Consulta seus sistemas em tempo real.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Toma decisões dentro de regras definidas.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Aprende os processos da sua empresa.</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trabalha 24h, sem pausas.</li>
         </ul>
       </div>
     </div>
@@ -514,7 +667,7 @@
 </section>
 
 <!-- SECTION 7: INTEGRATIONS -->
-<section id="integracoes" class="section-pad" style="background:#0c0d11; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+<section id="integracoes" class="section-pad" style="background:#0a0b0f; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="wrap">
     <div class="section-head center reveal">
       <span class="kicker">Sem trocar o que já funciona</span>
@@ -560,18 +713,17 @@
 </section>
 
 <!-- CONFIGURATOR -->
-<section id="configurador" class="section-pad" style="background:#0c0d11; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+<section id="configurador" class="section-pad" style="background:#0a0b0f; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="wrap">
     <div class="section-head center reveal">
       <span class="kicker">Descubra seu potencial</span>
-      <h2>Monte seu Colaborador Digital.</h2>
-      <p class="section-lead">Responda 4 perguntas rápidas e veja quanto tempo sua empresa pode economizar por mês.</p>
+      <h2>Quanto tempo sua empresa pode economizar?</h2>
+      <p class="section-lead">Responda 4 perguntas rápidas e veja o impacto estimado para o seu negócio.</p>
     </div>
     <div class="configurator reveal">
       <div class="config-progress">
         <span id="p1"></span><span id="p2"></span><span id="p3"></span><span id="p4"></span>
       </div>
-
       <div class="config-step active" data-step="1">
         <div class="config-q">Qual é o seu segmento?</div>
         <div class="config-opts">
@@ -581,7 +733,6 @@
           <button class="config-opt" data-field="segmento" data-value="Imobiliário">Imobiliário</button>
         </div>
       </div>
-
       <div class="config-step" data-step="2">
         <div class="config-q">Onde você atende seus clientes?</div>
         <div class="config-opts">
@@ -592,7 +743,6 @@
         </div>
         <div class="config-nav"><button class="config-back" onclick="prevStep()">← Voltar</button><span></span></div>
       </div>
-
       <div class="config-step" data-step="3">
         <div class="config-q">O que mais consome tempo hoje?</div>
         <div class="config-opts">
@@ -603,7 +753,6 @@
         </div>
         <div class="config-nav"><button class="config-back" onclick="prevStep()">← Voltar</button><span></span></div>
       </div>
-
       <div class="config-step" data-step="4">
         <div class="config-q">Quantos atendimentos você recebe por dia?</div>
         <div class="config-opts">
@@ -614,21 +763,60 @@
         </div>
         <div class="config-nav"><button class="config-back" onclick="prevStep()">← Voltar</button><span></span></div>
       </div>
-
       <div class="config-step" data-step="5">
         <div class="config-result">
           <div class="result-num" id="resultHours">—</div>
           <div class="result-label">horas por mês que sua empresa pode economizar com um Colaborador Digital da Nuvix.</div>
-          <a href="#" class="btn btn-primary" style="padding:15px 30px;">Agendar demonstração</a>
-          <div style="margin-top:16px;"><button class="config-back" onclick="restartConfig()">Refazer</button></div>
+          <a href="https://ig.me/m/nuvixoficial" target="_blank" rel="noopener" class="btn btn-primary" style="padding:15px 32px; font-size:15px;">Falar com a Nuvix →</a>
+          <div style="margin-top:14px;"><button class="config-back" onclick="restartConfig()">Refazer</button></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT SECTION -->
+<section id="contato" class="section-pad">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="kicker">Fale com a gente</span>
+      <h2>Pronto para conhecer a Nuvix?</h2>
+      <p class="section-lead">Escolha como prefere entrar em contato. Respondemos rápido.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <a href="https://ig.me/m/nuvixoficial" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-icon" style="background:linear-gradient(135deg,rgba(225,48,108,.15),rgba(131,58,180,.15)); border:1px solid rgba(225,48,108,.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </div>
+        <div class="contact-label">Instagram</div>
+        <div class="contact-value">@nuvixoficial</div>
+        <p style="font-size:13px; color:var(--text-dimmer); line-height:1.5;">Envie uma mensagem direta pelo Instagram. Canal mais rápido.</p>
+        <div class="contact-cta">Enviar mensagem <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+      </a>
+      <a href="mailto:nuvixoficial0@gmail.com" class="contact-card">
+        <div class="contact-icon" style="background:rgba(37,99,235,.1); border:1px solid rgba(37,99,235,.2);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C9CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </div>
+        <div class="contact-label">E-mail</div>
+        <div class="contact-value">nuvixoficial0@gmail.com</div>
+        <p style="font-size:13px; color:var(--text-dimmer); line-height:1.5;">Prefere e-mail? Escreva para nós. Respondemos em até 24h.</p>
+        <div class="contact-cta">Enviar e-mail <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+      </a>
+      <a href="https://www.linkedin.com/in/nuvix-18b079424/" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-icon" style="background:rgba(10,102,194,.12); border:1px solid rgba(10,102,194,.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">Nuvix</div>
+        <p style="font-size:13px; color:var(--text-dimmer); line-height:1.5;">Acompanhe novidades e conecte-se com a Nuvix no LinkedIn.</p>
+        <div class="contact-cta">Conectar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
-<section id="faq" class="section-pad">
+<section id="faq" class="section-pad" style="background:#0a0b0f; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="wrap">
     <div class="section-head center reveal">
       <span class="kicker">Tire suas dúvidas</span>
@@ -637,11 +825,11 @@
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-q">O que é exatamente um Colaborador Digital?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>É um sistema inteligente configurado para exercer uma função específica dentro da sua empresa — atendimento, vendas, financeiro ou processos internos — trabalhando de forma contínua.</p></div>
+        <div class="faq-a"><p>É um sistema inteligente configurado para exercer uma função específica dentro da sua empresa — atendimento, vendas, financeiro ou processos internos — trabalhando de forma contínua, 24 horas por dia.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Ele substitui minha equipe?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Não. Ele assume as tarefas repetitivas para que sua equipe humana foque no que exige julgamento, relacionamento e decisões estratégicas.</p></div>
+        <div class="faq-a"><p>Não. Ele assume as tarefas repetitivas para que sua equipe humana foque no que exige julgamento, relacionamento e decisões estratégicas. Os dois trabalham juntos.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Quanto tempo leva para começar a funcionar?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
@@ -649,7 +837,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Preciso trocar de sistema para usar a Nuvix?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Não. A integração acontece com as ferramentas que sua empresa já utiliza — CRM, ERP, agenda e canais de atendimento.</p></div>
+        <div class="faq-a"><p>Não. A integração acontece com as ferramentas que sua empresa já utiliza — CRM, ERP, agenda e canais de atendimento. Nada precisa mudar no dia a dia.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Meus dados e os dos meus clientes estão seguros?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
@@ -657,23 +845,15 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Funciona para o meu segmento?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Sim. Cada colaborador digital é configurado a partir dos processos reais da sua empresa, independente do segmento.</p></div>
+        <div class="faq-a"><p>Sim. Cada colaborador digital é configurado a partir dos processos reais da sua empresa, independente do segmento ou tamanho.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Quanto custa?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>O investimento varia conforme o número de colaboradores digitais e a complexidade das integrações. Na demonstração, montamos uma proposta sob medida.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Consigo acompanhar o que ele está fazendo?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Sim. Um painel mostra em tempo real as conversas, tarefas realizadas e o tempo economizado pela sua equipe.</p></div>
+        <div class="faq-a"><p>O investimento varia conforme o número de colaboradores digitais e a complexidade das integrações. Entre em contato e montamos uma proposta sob medida para o seu negócio.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Posso ter mais de um colaborador digital?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Sim. A maioria das empresas começa com um colaborador e expande para outras áreas conforme percebe os resultados.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Como começo?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-        <div class="faq-a"><p>Agende uma demonstração gratuita. Mostramos como um colaborador digital funcionaria dentro da sua operação antes de qualquer compromisso.</p></div>
+        <div class="faq-a"><p>Sim. A maioria das empresas começa com um colaborador e expande para outras áreas conforme percebe os resultados na operação.</p></div>
       </div>
     </div>
   </div>
@@ -682,59 +862,92 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
   <span class="kicker reveal">Comece hoje</span>
-  <h2 class="reveal">Sua próxima contratação pode começar hoje.</h2>
-  <a href="#configurador" class="btn btn-primary reveal" style="padding:16px 34px; font-size:15.5px;">Agendar demonstração</a>
+  <h2 class="reveal">Sua próxima contratação<br>pode começar hoje.</h2>
+  <div class="cta-actions reveal">
+    <a href="https://ig.me/m/nuvixoficial" target="_blank" rel="noopener" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+      Falar pelo Instagram
+    </a>
+    <a href="mailto:nuvixoficial0@gmail.com" class="btn btn-ghost">Enviar e-mail</a>
+  </div>
+  <p class="cta-note">Sem compromisso. Respondemos em até 24h.</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">
           <svg class="logo-mark" viewBox="0 0 24 24" fill="none">
-            <path d="M4 16C4 9.4 9.4 4 16 4" stroke="url(#g3)" stroke-width="2.6" stroke-linecap="round"/>
-            <defs><linearGradient id="g3" x1="4" y1="16" x2="16" y2="4"><stop stop-color="#7C9CFF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
+            <path d="M4 16C4 9.4 9.4 4 16 4" stroke="url(#gf)" stroke-width="2.6" stroke-linecap="round"/>
+            <defs><linearGradient id="gf" x1="4" y1="16" x2="16" y2="4"><stop stop-color="#7C9CFF"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
           </svg>
           NUVIX
         </div>
         <p>Colaboradores digitais que trabalham dentro da sua empresa, 24 horas por dia.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/nuvixoficial/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nuvix-18b079424/" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:nuvixoficial0@gmail.com" class="footer-social" aria-label="E-mail">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h5>PRODUTO</h5>
+          <h5>Produto</h5>
           <a href="#solucoes">Soluções</a>
           <a href="#como-funciona">Como funciona</a>
           <a href="#integracoes">Integrações</a>
+          <a href="#configurador">Calculadora</a>
         </div>
         <div class="footer-col">
-          <h5>EMPRESA</h5>
-          <a href="#">Sobre</a>
-          <a href="#">Segurança</a>
+          <h5>Empresa</h5>
           <a href="#faq">FAQ</a>
+          <a href="https://www.instagram.com/nuvixoficial/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/nuvix-18b079424/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
-          <h5>CONTATO</h5>
-          <a href="#configurador">Agendar demonstração</a>
-          <a href="#">Falar com vendas</a>
+          <h5>Contato</h5>
+          <a href="https://ig.me/m/nuvixoficial" target="_blank" rel="noopener">Instagram DM</a>
+          <a href="mailto:nuvixoficial0@gmail.com">nuvixoficial0@gmail.com</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Nuvix. Todos os direitos reservados.</span>
-      <span>Feito para empresas que querem crescer com inteligência.</span>
+      <span>Colaboradores Digitais para empresas inteligentes.</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
+  // ── scroll reveal ──
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  revealEls.forEach(el => io.observe(el));
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // FAQ accordion
+  // ── hamburger ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ── FAQ ──
   document.querySelectorAll('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-q');
     const a = item.querySelector('.faq-a');
@@ -745,26 +958,21 @@
     });
   });
 
-  // configurator
+  // ── configurator ──
   let currentStep = 1;
   const answers = {};
   const totalSteps = 4;
 
-  function updateProgress(){
-    for(let i=1;i<=totalSteps;i++){
-      document.getElementById('p'+i).classList.toggle('done', i <= currentStep - (currentStep>totalSteps?0:1) || i < currentStep);
-    }
-  }
-  function showStep(n){
+  function showStep(n) {
     document.querySelectorAll('.config-step').forEach(s => s.classList.remove('active'));
     document.querySelector('.config-step[data-step="'+n+'"]').classList.add('active');
     currentStep = n;
-    for(let i=1;i<=totalSteps;i++){
+    for (let i = 1; i <= totalSteps; i++) {
       document.getElementById('p'+i).classList.toggle('done', i < n);
     }
   }
-  function prevStep(){ if(currentStep > 1) showStep(currentStep - 1); }
-  function restartConfig(){ showStep(1); }
+  function prevStep() { if (currentStep > 1) showStep(currentStep - 1); }
+  function restartConfig() { Object.keys(answers).forEach(k => delete answers[k]); showStep(1); }
 
   document.querySelectorAll('.config-opt').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -772,10 +980,9 @@
       if (currentStep < totalSteps) {
         showStep(currentStep + 1);
       } else {
-        // compute result
         const volume = parseInt(answers.volume || 50, 10);
-        const gargaloWeight = { 'Responder clientes':1.3, 'Agendar horários':1.1, 'Cadastrar dados':0.9, 'Cobrança e follow-up':1.0 };
-        const weight = gargaloWeight[answers.gargalo] || 1;
+        const w = { 'Responder clientes':1.3, 'Agendar horários':1.1, 'Cadastrar dados':0.9, 'Cobrança e follow-up':1.0 };
+        const weight = w[answers.gargalo] || 1;
         const hours = Math.round((volume * 0.12 * weight) * 4.3 / 5) * 5;
         document.getElementById('resultHours').textContent = '~' + hours;
         document.querySelectorAll('.config-step').forEach(s => s.classList.remove('active'));
